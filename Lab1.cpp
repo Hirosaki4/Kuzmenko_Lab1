@@ -21,15 +21,18 @@ int main() {
         cout << number << " не просте число" << endl;
     }
     else {
-        int i = 2;
-        while (i <= sqrt(number)) {
-            if (number % i == 0) {
-                cout << number << " не просте число" << endl;
-                return 0; 
-            }
-            i++;
+        if (number % 2 == 0 && number != 2) {
+            cout << number << " не просте число" << endl;
         }
-        cout << number << " просте число" << endl;
+        else if (number % 3 == 0 && number != 3) {
+            cout << number << " не просте число" << endl;
+        }
+        else if (number % 5 == 0 && number != 5) {
+            cout << number << " не просте число" << endl;
+        }
+        else {
+            cout << number << " просте число" << endl;
+        }
     }
 
     return 0;
